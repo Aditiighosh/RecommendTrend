@@ -1,15 +1,18 @@
-// Import necessary modules and components
-import  ImageUploader  from "./components/upload"; // Import the upload component
-import { Button } from "./components/ui/button"; // Import the button component
-import "./globals.css"; // Import global styles
+import {Button} from "./components/ui/button";
+import {LandingPage} from "./components/landing/page";
+import './globals.css';
+import { NavBar } from "./components/NavBar/page";
+import {About} from "./About/page";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Image Upload Example</h1>
-      <div className="mt-10">
-        <ImageUploader /> {/* Image upload component */} 
-      </div>
-      <Button variant={'destructive'}>shadcn button </Button> 
-    </main>
+      <main>
+       <NavBar/>
+       <LandingPage/>
+        <About/>
+          {/* <div className="flex justify-center items-center h-screen">
+            <Button>Click Me</Button>
+          </div> */}
+       </main>
+      
   );
 }
